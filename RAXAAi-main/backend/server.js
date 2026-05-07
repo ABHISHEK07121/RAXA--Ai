@@ -37,7 +37,8 @@ const defaultCorsOrigins = [
   'http://localhost:3000',
   'http://127.0.0.1:3000',
   'http://localhost:3001',
-  'http://127.0.0.1:3001'
+  'http://127.0.0.1:3001',
+  'https://raxa-ai.vercel.app'
 ];
 const configuredOrigins = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(',').map((origin) => origin.trim()).filter(Boolean)
