@@ -2,14 +2,13 @@
   "name": "raxa-frontend",
   "version": "2.0.0",
   "private": true,
-  "description": "RAXA AI Disease Prediction Frontend - Next.js 15 with TypeScript",
+  "description": "RAXA AI Disease Prediction Frontend - Next.js with TypeScript",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "type-check": "tsc --noEmit",
-    "install-deps": "npm install"
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "axios": "^1.13.4",
@@ -28,14 +27,14 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^9",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": "18.x"
   }
 }
