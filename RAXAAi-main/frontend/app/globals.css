@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: "Segoe UI", Arial, sans-serif;
+
+  --color-primary: #0EA5E9; /* Premium Blue */
+  --color-primary-dark: #0284C7;
+  --color-medical-teal: #0EA5A4; /* Medical Teal */
+  --color-accent: #8B5CF6; /* Purple for depth */
+  
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+
+  --shadow-premium: 0 20px 50px -12px rgba(0, 0, 0, 0.08);
+  --shadow-premium-hover: 0 30px 60px -12px rgba(0, 0, 0, 0.12);
+  
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-family-sans);
+    background-color: white;
+    color: var(--color-slate-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .premium-card {
+    @apply bg-white border border-slate-200 rounded-3xl shadow-premium transition-all duration-300 hover:shadow-premium-hover hover:-translate-y-1;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 rounded-3xl shadow-premium;
+  }
+
+  .medical-gradient {
+    @apply bg-linear-to-br from-primary to-medical-teal;
+  }
+
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-linear-to-r from-primary to-medical-teal;
+  }
+}
